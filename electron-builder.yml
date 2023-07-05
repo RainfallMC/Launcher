@@ -1,8 +1,8 @@
-appId: 'helioslauncher'
-productName: 'Helios Launcher'
+appId: 'rainfalllauncher'
+productName: 'Rainfall Launcher'
 artifactName: '${productName}-setup-${version}.${ext}'
 
-copyright: 'Copyright © 2018-2022 Daniel Scalzi'
+copyright: 'Copyright © 2023-2023 Damien S______'
 
 asar: true
 compression: 'maximum'
