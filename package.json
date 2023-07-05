@@ -1,6 +1,6 @@
 {
   "name": "rainfalllauncher",
-  "version": "0.0.2",
+  "version": "1.0.3",
   "productName": "Rainfall Launcher",
   "description": "Modded Minecraft Launcher",
   "author": "Daniel Scalzi (https://github.com/dscalzi/)",
@@ -44,6 +44,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dscalzi/HeliosLauncher.git"
+    "url": "git+https://github.com/heyimocto/rainfall-launcher.git"
   }
 }
