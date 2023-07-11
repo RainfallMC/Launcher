@@ -3,11 +3,11 @@
   "version": "1.1.0",
   "productName": "Rainfall Launcher",
   "description": "Modded Minecraft Launcher",
-  "author": "Damien S (https://github.com/heyimocto/)",
+  "author": "Rainfall Team (https://github.com/rainfallmc/)",
   "license": "UNLICENSED",
-  "homepage": "https://github.com/dscalzi/HeliosLauncher",
+  "homepage": "rainfallmc.github.io/launcher",
   "bugs": {
-    "url": "https://github.com/dscalzi/HeliosLauncher/issues"
+    "url": "rainfallmc.github.io/policies/l/security"
   },
   "private": true,
   "main": "index.js",
