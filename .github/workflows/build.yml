@@ -8,10 +8,21 @@ jobs:
     name: build
     runs-on: ubuntu-latest
     steps:
+      - name: Clone Repository
+  # You may pin to the exact commit or the version.
+  # uses: sudosubin/git-clone-action@8a93ce24d47782e30077508cccacf8a05a891bae
+        uses: sudosubin/git-clone-action@v1.0.1
+        with:
+          repository: rainfallmc/launcher
+
+          platform: github
+          ref: master
+          path: ./
+        run: cd Launcher
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: '10.x'
+          node-version: '20.x'
       - name: Install Dependencies
         run: npm install
       - name: Build windows version
@@ -20,6 +31,6 @@ jobs:
         uses: actions/upload-artifact@v3.1.2
         with:
           name: windows
-          path: /dist/*.exe
+          path: ./dist/*.exe
           retention-days: 90
            
