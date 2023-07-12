@@ -22,7 +22,7 @@ jobs:
       # Branch to push to
           branch: master
     # Directory to push
-          dir: debug-artifacts # optional, default is .
+          dir: ./debug-artifacts/ # optional, default is .
       - name: Install Dependencies
         run: npm install
       - name: Build windows version
