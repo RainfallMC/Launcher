@@ -8,16 +8,8 @@ jobs:
     name: build
     runs-on: ubuntu-latest
     steps:
-      - name: Clone Repository
-        uses: sudosubin/git-clone-action@v1.0.1
-        with:
-          repository: rainfallmc/launcher
-
-          platform: github
-          ref: master
-          path: Launcher
-      - name: Set directory
-        run: cd Launcher
+      - name: (debug) dir
+        run: dir
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
