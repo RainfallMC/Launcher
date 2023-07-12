@@ -3,6 +3,8 @@ on:
     branches:
     - master
   workflow_dispatch:
+env:
+  GH_TOKEN: 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
 jobs:
   build:
     name: build
