@@ -15,7 +15,7 @@ jobs:
 
           platform: github
           ref: master
-          path: ./Launcher
+          path: Launcher
       - name: Set directory
         run: cd Launcher
       - name: Setup Node
