@@ -6,22 +6,50 @@ on:
 env:
   GH_TOKEN: ${{ secrets.github_token }}
 jobs:
-  build:
-    name: build
+  prep-build:
+    name: Prepare build environment
+    runs-on: ubuntu-16.04
+    steps:
+      - name: Purge old artifacts
+        uses: kolpav/purge-artifacts-action@v1
+        with:
+          expire-in: 0
+          token: GH_TOKEN
+  build-win:
+    name: Build windows version
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: '20.x'
-      - name: Install Dependencies
+          node-version: '18.x'
+      - name: Install dependencies
         run: npm install
       - name: Build windows version
         run: npm run dist:win
-      - name: Upload the Windows Build Artifact
+      - name: Upload build artifact
         uses: actions/upload-artifact@v3.1.2
         with:
-          name: windows
+          name: windows-latest
           path: ./dist/*.exe
+          retention-days: 90
+  build-mac:
+    name: Build macOS version
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '18.x'
+      - name: Install dependencies
+        run: npm install
+      - name: Build windows version
+        run: npm run dist:mac
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v3.1.2
+        with:
+          name: mac-latest
+          path: ./dist/*.app
           retention-days: 90
