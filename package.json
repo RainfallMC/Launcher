@@ -5,9 +5,9 @@
   "description": "A Minecraft Launcher",
   "author": "Rainfall Team (https://github.com/rainfallmc/)",
   "license": "UNLICENSED",
-  "homepage": "rainfallmc.github.io/launcher",
+  "homepage": "https://rainfallmc.github.io/launcher",
   "bugs": {
-    "url": "rainfallmc.github.io/policies/l/security"
+    "url": "https://rainfallmc.github.io/policies/l/security"
   },
   "private": true,
   "main": "index.js",
