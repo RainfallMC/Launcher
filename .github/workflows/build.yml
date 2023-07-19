@@ -36,11 +36,17 @@ jobs:
           node-version: '18.x'
       - name: Install dependencies
         run: npm install
-      - name: Build windows version
+      - name: Build mac version
         run: npm run dist:mac
-      - name: Upload build artifact
+      - name: Upload Apple Silicon build artifact
         uses: actions/upload-artifact@v3.1.2
         with:
-          name: mac-latest
-          path: ./dist/*
+          name: macos-latest-apple
+          path: ./dist/*arm64.dmg
+          retention-days: 90
+      - name: Upload Intel build artifact
+        uses: actions/upload-artifact@v3.1.2
+        with:
+          name: macos-latest-apple
+          path: ./dist/*x64.dmg
           retention-days: 90
