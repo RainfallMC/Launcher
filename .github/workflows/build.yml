@@ -14,7 +14,7 @@ jobs:
         uses: kolpav/purge-artifacts-action@v1
         with:
           expire-in: 0
-          token: GH_TOKEN
+          token: ${{ secrets.github_token }}
   build-win:
     name: Build windows version
     runs-on: windows-latest
@@ -51,5 +51,5 @@ jobs:
         uses: actions/upload-artifact@v3.1.2
         with:
           name: mac-latest
-          path: ./dist/*.app
+          path: ./dist/*
           retention-days: 90
