@@ -6,15 +6,6 @@ on:
 env:
   GH_TOKEN: ${{ secrets.github_token }}
 jobs:
-  prep-build:
-    name: Prepare build environment
-    runs-on: ubuntu-latest
-    steps:
-      - name: Purge old artifacts
-        uses: kolpav/purge-artifacts-action@v1
-        with:
-          expire-in: 0
-          token: ${{ secrets.github_token }}
   build-win:
     name: Build windows version
     runs-on: windows-latest
