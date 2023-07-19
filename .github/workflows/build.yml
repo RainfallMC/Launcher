@@ -8,7 +8,7 @@ env:
 jobs:
   prep-build:
     name: Prepare build environment
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-latest
     steps:
       - name: Purge old artifacts
         uses: kolpav/purge-artifacts-action@v1
